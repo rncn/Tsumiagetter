@@ -1,0 +1,117 @@
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: auto;
+    * {
+        font-family: $font-family-sans-serif;
+
+        &:focus {
+            outline: solid $red 1px !important;
+        }
+    }
+    header {
+        width: 100%;
+        height: $header-height;
+        box-sizing: border-box;
+        padding: 0 1%;
+        background-color: $hashtag-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq(md){
+            height: $header-height * 3;
+        }
+
+        .brand {
+            margin: 0;
+            font-size: $header-height - 2px;
+            line-height: $header-height;
+            color: $tw-color;
+        }
+
+        .col-w {
+            color: white;
+        }
+        
+        a {
+            color: $tw-color;
+        }
+        .sform {
+            width: 45%;
+            .search {
+                width: 100%;
+                height: $header-height;
+                background-color: rgba(255, 255, 255, 0.5);
+                outline: none !important;
+                border: none;
+                transition: background-color .2s;
+    
+                &:focus {
+                    background-color: white;
+                    transition: background-color .2s;
+                }
+            }
+        }
+        
+    }
+    
+    article {
+        
+        hashtag {
+            font-size: 2em;
+            color: $hashtag-color;
+        }
+        h2 {
+            color: $hashtag-color;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background-color: $hashtag-color;
+            border: solid 2px $hashtag-color;
+            outline: none;
+            color: $tw-color;
+            transition: background-color .2s;
+            cursor: pointer;
+
+            &:hover , &:focus{
+                transition: background-color .2s;
+                background-color: $hashtag-color-hov;
+            }
+        }
+        .dashbord {
+            display: flex;
+            @include mq(sm){
+                display: block;
+            }
+            
+            .navbar { 
+                width: 20%;
+                height: calc(100vh - #{$header-height} );
+                @include mq(sm){
+                    width: 100%;
+                    border-bottom: solid 2px black;
+                    height: calc(100vh - #{$header-height * 3} );
+                }
+                box-sizing: border-box;
+                padding: 0 2%;
+                overflow-y: auto;
+            }
+            .main {
+                width: 80%;
+
+                #todolist {
+                    
+                }
+            }
+            .input {
+                max-width: 100%;
+                padding: 10px;
+                font-size: 2em;
+            }
+        }
+    }
+}

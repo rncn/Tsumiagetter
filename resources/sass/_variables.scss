@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "sawarabi";
+    src: url("/library/fonts/SawarabiGothic-Regular.ttf") format("ttf"),
+         url("/library/fonts/SawarabiGothic-Regular.woff") format("woff");
+}
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 900px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+}
+
+// Colors
+$theme: #fffab3;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$hashtag-color: #1DA1F2;
+$hashtag-color-hov: rgb(12, 12, 12);
+$tw-color: white;
+
+// Body
+$body-bg: #f8fafc;
+//header
+$header-height: 25px;
+// Typography
+$font-family-sans-serif: 'sawarabi', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+

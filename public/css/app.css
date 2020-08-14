@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "sawarabi";
+  src: url("/library/fonts/SawarabiGothic-Regular.ttf") format("ttf"), url("/library/fonts/SawarabiGothic-Regular.woff") format("woff");
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+body * {
+  font-family: "sawarabi", sans-serif;
+}
+
+body *:focus {
+  outline: solid #e3342f 1px !important;
+}
+
+body header {
+  width: 100%;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 0 1%;
+  background-color: #1DA1F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  body header {
+    height: 75px;
+  }
+}
+
+body header .brand {
+  margin: 0;
+  font-size: 23px;
+  line-height: 25px;
+  color: white;
+}
+
+body header .col-w {
+  color: white;
+}
+
+body header a {
+  color: white;
+}
+
+body header .sform {
+  width: 45%;
+}
+
+body header .sform .search {
+  width: 100%;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none !important;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+body header .sform .search:focus {
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+body article hashtag {
+  font-size: 2em;
+  color: #1DA1F2;
+}
+
+body article h2 {
+  color: #1DA1F2;
+}
+
+body article .button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1DA1F2;
+  border: solid 2px #1DA1F2;
+  outline: none;
+  color: white;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+body article .button:hover,
+body article .button:focus {
+  transition: background-color 0.2s;
+  background-color: #0c0c0c;
+}
+
+body article .dashbord {
+  display: flex;
+}
+
+@media screen and (max-width: 400px) {
+  body article .dashbord {
+    display: block;
+  }
+}
+
+body article .dashbord .navbar {
+  width: 20%;
+  height: calc(100vh - 25px );
+  box-sizing: border-box;
+  padding: 0 2%;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 400px) {
+  body article .dashbord .navbar {
+    width: 100%;
+    border-bottom: solid 2px black;
+    height: calc(100vh - 75px );
+  }
+}
+
+body article .dashbord .main {
+  width: 80%;
+}
+
+body article .dashbord .input {
+  max-width: 100%;
+  padding: 10px;
+  font-size: 2em;
+}
+
